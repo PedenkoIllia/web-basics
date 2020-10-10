@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Mvc;
+using web_basics.business.Domains;
 
 namespace web_basics.Controllers
 {
@@ -12,17 +7,17 @@ namespace web_basics.Controllers
     [ApiController]
     public class CatController : ControllerBase
     {
-        business.Domains.Cat domain;
+        CatService _service;
 
-        public CatController(IConfiguration configuration) 
+        public CatController(CatService service) 
         {
-            this.domain = new business.Domains.Cat(configuration);
+            _service = service;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            var cats = this.domain.Get();
+            var cats = _service.Get();
             return Ok(cats);
         }
     }

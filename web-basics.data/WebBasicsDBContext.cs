@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using web_basics.data.Entities;
 
 namespace web_basics.data
@@ -13,7 +10,7 @@ namespace web_basics.data
 
         public WebBasicsDBContext(IConfiguration configuration) : base()
         {
-            this._configuration = configuration;
+            _configuration = configuration;
             DbInitializer.Initialize(this);
         }
 
@@ -23,5 +20,6 @@ namespace web_basics.data
         }
 
         public DbSet<Cat> Cats { get; set; }
+        public DbSet<Dog> Dogs { get; set; }
     }
 }
