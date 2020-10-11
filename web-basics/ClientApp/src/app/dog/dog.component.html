@@ -13,15 +13,13 @@
       <td>{{ dog.id }}</td>
       <td>{{ dog.name }}</td>
       <td>{{ dog.age }}</td>
-      <td><!--For change function--></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input type="text" [(ngModel)]="name"></td>
-      <td>
-        <input type="number" [(ngModel)]="age">
-      </td>
-      <td><input class="" type="submit" value="Add dog" (click)="addDog()"></td>
     </tr>
 </tbody>
 </table>
+<form #dogForm="ngForm" class="dogForm" (ngSubmit)="onSubmit()">
+  <label for="name">Dog's name:</label>
+  <input name="name" id="name" type="text" placeholder="Enter name" [(ngModel)]="name">
+  <label for="age">Dog's age:</label>
+  <input name="age" id="age" type="number" [(ngModel)]="age">
+  <button type="submit">Add new dog</button>
+</form>

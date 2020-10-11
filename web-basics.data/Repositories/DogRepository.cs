@@ -13,11 +13,11 @@ namespace web_basics.data.Repositories
             _context = context;
         }
 
-        public bool Add(Dog dog)
+        public int Add(Dog dog)
         {
             _context.Dogs.Add(dog);
             _context.SaveChanges();
-            return true;
+            return dog.Id;
         }
 
         public IEnumerable<Dog> Get()

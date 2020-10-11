@@ -25,8 +25,12 @@ namespace web_basics.Controllers
         [HttpPost]
         public IActionResult CreateDog([FromBody] DogViewModel dogModel)
         {
-            if (_service.Add(dogModel))
-                return Ok();
+            int id = _service.Add(dogModel);
+            if (id > 0)
+            {
+                dogModel.Id = id;
+                return Ok(dogModel);
+            }
             else
                 return BadRequest();
         }

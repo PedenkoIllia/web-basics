@@ -21,7 +21,7 @@ namespace web_basics.business.Domains
             }).CreateMapper();
         }
 
-        public bool Add(DogViewModel dogModel)
+        public int Add(DogViewModel dogModel)
         {
             Dog dog = _mapper.Map<DogViewModel, Dog>(dogModel);
             return _repository.Add(dog);
