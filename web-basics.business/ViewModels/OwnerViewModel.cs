@@ -1,6 +1,6 @@
-﻿namespace web_basics.data.Entities
+﻿namespace web_basics.business.ViewModels
 {
-    public class Owner
+    public class OwnerViewModel
     {
         public int Id { get; set; }
         public int UserId { get; set; }

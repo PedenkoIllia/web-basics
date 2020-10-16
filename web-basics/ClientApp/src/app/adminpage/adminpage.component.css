@@ -1,0 +1,35 @@
+.newAccountForm {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+  .newAccountForm label {
+    margin: 5px 10px 5px 0;
+  }
+
+  .newAccountForm input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .newAccountForm select {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .newAccountForm button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    border-radius: 5px;
+  }

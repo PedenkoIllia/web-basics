@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace web_basics.business.ViewModels
+﻿namespace web_basics.business.ViewModels
 {
-    public class Account
+    public class AccountViewModel
     {
         public int Id { get; set; }
         public string Email { get; set; }
@@ -14,7 +10,8 @@ namespace web_basics.business.ViewModels
 
     public enum Role
     {
+        Admin,
         User,
-        Admin
+        UnusualUser
     }
 }

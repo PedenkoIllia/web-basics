@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace web_basics.business.ViewModels
 {
-    public class Login
+    public class LoginViewModel
     {
         [Required]
         [EmailAddress]

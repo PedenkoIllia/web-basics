@@ -21,6 +21,10 @@ export class NavMenuComponent {
     return this.as.isAuthenticated();
   }
 
+  public get isAdmin(): boolean {
+    return this.as.isAdmin();
+  }
+
   constructor(
     private as: AuthService
   ) { }

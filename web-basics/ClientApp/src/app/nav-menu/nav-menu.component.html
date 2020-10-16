@@ -35,6 +35,8 @@
           <!-- Animals -->
           <li class="nav-item" [routerLinkActive]="['link-active']" *ngIf='isLoggedId'>
             <a class="nav-link text-dark" [routerLink]="['/cat']">Cat</a>
+          <li class="nav-item" [routerLinkActive]="['link-active']" *ngIf='isAdmin'>
+            <a class="nav-link text-dark" [routerLink]="['/adminPage']">Admin page</a>
           </li>
         </ul>
       </div>

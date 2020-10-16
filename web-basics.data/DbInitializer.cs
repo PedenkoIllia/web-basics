@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using System.Linq;
 using web_basics.data.Entities;
 
 namespace web_basics.data
@@ -15,29 +11,29 @@ namespace web_basics.data
 
             if (!context.Cats.Any())
             {
-                context.Cats.AddRange(new Entities.Cat[] {
-                    new Entities.Cat() { Name = "Barsik", Age = 3 },
-                    new Entities.Cat() { Name = "Kozkii", Age = 4 },
-                    new Entities.Cat() { Name = "Murka", Age = 13 },
-                    new Entities.Cat() { Name = "Bony", Age = 2 }
+                context.Cats.AddRange(new Cat[] {
+                    new Cat() { Name = "Barsik", Age = 3 },
+                    new Cat() { Name = "Kozkii", Age = 4 },
+                    new Cat() { Name = "Murka", Age = 13 },
+                    new Cat() { Name = "Bony", Age = 2 }
                 });
             }
 
             if (!context.Accounts.Any())
             {
-                context.Accounts.AddRange(new Entities.Account[] {
-                    new Entities.Account() { Email = "user1@email.com", Password = "111111", Role = Role.User },
-                    new Entities.Account() { Email = "user2@email.com", Password = "222222", Role = Role.User },
-                    new Entities.Account() { Email = "admin@email.com", Password = "password", Role = Role.Admin }
+                context.Accounts.AddRange(new Account[] {
+                    new Account() { Email = "user1@email.com", Password = "111111", Role = Role.User },
+                    new Account() { Email = "user2@email.com", Password = "222222", Role = Role.User },
+                    new Account() { Email = "admin@email.com", Password = "password", Role = Role.Admin }
                 });
             }
 
             if (!context.Owners.Any())
             {
-                context.Owners.AddRange(new Entities.Owner[] {
-                    new Entities.Owner() { UserId = 1 , CatId = 1 },
-                    new Entities.Owner() { UserId = 2 , CatId = 3 },
-                    new Entities.Owner() { UserId = 2 , CatId = 4 }
+                context.Owners.AddRange(new Owner[] {
+                    new Owner() { UserId = 1 , CatId = 1 },
+                    new Owner() { UserId = 2 , CatId = 3 },
+                    new Owner() { UserId = 2 , CatId = 4 }
                 });
             }
 

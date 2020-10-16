@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace web_basics.data.Entities
+﻿namespace web_basics.data.Entities
 {
     public class Account
     {
@@ -14,7 +10,8 @@ namespace web_basics.data.Entities
 
     public enum Role
     {
+        Admin,
         User,
-        Admin
+        UnusualUser
     }
 }

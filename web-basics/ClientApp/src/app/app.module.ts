@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 import { JwtModule } from '@auth0/angular-jwt';
 import { ACCESS_TOKEN_KEY } from './services/auth.service';
 import { AUTH_API_URL } from './app-injection-token';
+import { AdminpageComponent } from './adminpage/adminpage.component';
 
 export function tokenGetter() {
   return localStorage.getItem(ACCESS_TOKEN_KEY);
@@ -26,7 +27,8 @@ export function tokenGetter() {
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CatComponent
+    CatComponent,
+    AdminpageComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,6 +39,7 @@ export function tokenGetter() {
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'cat', component: CatComponent },
+      { path: 'adminPage', component: AdminpageComponent },
     ]),
     HttpClientModule,
     JwtModule.forRoot({
